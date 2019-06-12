@@ -4,6 +4,9 @@
  * @var \App\Model\Entity\Location $location
  */
 ?>
+<br>
+<?= $this->element('navigation') ?>
+<br>
 <div class="locations form large-9 medium-8 columns content">
     <?= $this->Form->create($location) ?>
     <fieldset>
