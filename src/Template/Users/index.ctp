@@ -68,9 +68,11 @@
                 <td><?= h($user->email) ?></td>
                 <!--<td><?= h($user->password) ?></td>-->
                 <td><?= h($user->phone) ?></td>
-                    <td style="padding: 2px; padding-top: 10px; padding-bottom: 10px;"><?= $this->Html->link(__('View'), ['action' => 'view', $user->id], array('class' => 'btn btn-info')); ?></td>
-                    <td style="padding: 2px; padding-top: 10px; padding-bottom: 10px;"><?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], array('class' => 'btn btn-warning')); ?></td>
-                    <td style="padding: 2px; padding-top: 10px; padding-bottom: 10px;"><?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], array('class' => 'btn btn-danger'), ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]); ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], array('class' => 'btn btn-info')); ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], array('class' => 'btn btn-warning')); ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], array('class' => 'btn btn-danger'), ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
